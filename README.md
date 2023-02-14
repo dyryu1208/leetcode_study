@@ -1,3 +1,3 @@
 # leetcode_study
 
-* Leetcode_study 진행
+* Leetcode 관련 파일을 정리한 리포지토리
