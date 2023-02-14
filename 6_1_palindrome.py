@@ -1,3 +1,4 @@
+from email.policy import default
 import re
 import time
 import collections
@@ -9,7 +10,7 @@ import collections
 예제 2) race a car -> False
 """
 
-"""
+
 def palindrome_dy(string):
     '''
     본인 시도 결과물
@@ -38,9 +39,9 @@ string = 'A man, a plan, a canal: Panama'
 #string = 'race a car'
 palindrome_dy(string)
 print(time.time() - start)
-"""
 
-"""
+
+
 def palindrome_1(s: str) -> bool:
     '''
     1. s(str) 입력으로 받음
@@ -49,6 +50,7 @@ def palindrome_1(s: str) -> bool:
     4. strs.pop() --> 인자로 들어가는 위치의 리스트 값을 제거
                 ex) strs.pop(0) --> 첫번째 인덱스의 리스트값 제거
                 ex) strs.pop() --> 마지막 인덱스의 리스트값 제거
+                선언과 동시에 수행이 된다
     5. 첫번째 위치와 마지막 위치 원소값을 계속 매치하면서 값을 제거
     '''
     strs = []
@@ -67,13 +69,17 @@ string = 'A man, a plan, a canal: Panama'
 #string = 'race a car'
 palindrome_1(string)
 print(time.time() - start) 
-"""
 
-"""
+
+
 def palindrome_2(s: str) -> bool:
     '''
     Deque형을 이용한 시간 최적화
+    일반적으로 리스트를 많이 쓰게 되면 시간이 너무 오래 걸린다!
+    리스트는 원소를 찾는데 모든 원소를 찾기 때문에...
+    --> Deque 데이터형 사용(Deque는 딱 그 원소에 다이렉트로 간다)
     strs.popleft() 함수를 사용한게 차이
+    --> pop 자체가 오른쪽부터 시작되어 왼쪽부터 수행하는 popleft() 사용
     '''
     strs: Deque = collections.deque()
     
@@ -92,7 +98,8 @@ string = 'A man, a plan, a canal: Panama'
 #string = 'race a car'
 palindrome_2(string)
 print(time.time() - start) 
-"""
+
+
 
 def palindrome_3(s: str) -> bool:
     '''

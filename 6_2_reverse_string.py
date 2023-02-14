@@ -7,7 +7,7 @@ from typing import List
 예제 2. ['H', 'a', 'n', 'n', 'a', 'h'] -> ['h', 'a', 'n', 'n', 'a', 'H']
 """
 
-"""
+
 def reverse_string_dy(string):
     '''
     6_1의 list(reversed(string)) 사용
@@ -21,9 +21,9 @@ s = 'Hannah'
 # s = 'hello'
 reverse_string_dy(s)
 print(time.time() - start)
-"""
 
-"""
+
+
 def reverse_string_1(s: List[str]) -> None:
     '''
     투 포인터를 활용한 스왑
@@ -42,7 +42,7 @@ s = 'Hannah'
 # s = 'hello'
 reverse_string_1(s)
 print(time.time() - start)
-"""
+
 
 
 def reverse_string_2(s: List[str]) -> None:
