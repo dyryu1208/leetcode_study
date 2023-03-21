@@ -35,7 +35,6 @@ def solution_1(s: str) -> str:
     
     for char in sorted(set(s)):
         suffix = s[s.index(char):]
-        print(suffix)
         if set(s) == set(suffix):
             return char + solution_1(suffix.replace(char,''))
     
@@ -52,10 +51,13 @@ def solution_2(s: str) -> str:
     * while stack and ~ 구문
     
     1) while stack : stack이 빈 리스트가 아닐때
-    2) char < stack[-1] : 글자의 ascii진수값이 stack의 마지막 요소보다 작을때
+    2) char < stack[-1] : char의 ascii값이 stack의 마지막 요소보다 작을때
                           ascii값 : a -> z로 갈수록 커짐
                                    a < b < c < d ...
     3) counter[stack[-1]] > 0 : stack[-1]의 등장 횟수가 0보다 큰 경우
+    
+    해당 코드를 축약하면 --> 뒤에 붙일 문자가 남아 있다면 stack에서 앞 문자를 제거
+                        ex. bcabc --> abc
     '''
     counter, seen, stack = Counter(s), set(), []
     
