@@ -1,4 +1,3 @@
-from email.policy import default
 import re
 import time
 import collections
@@ -41,7 +40,6 @@ palindrome_dy(string)
 print(time.time() - start)
 
 
-
 def palindrome_1(s: str) -> bool:
     '''
     1. s(str) 입력으로 받음
@@ -64,13 +62,6 @@ def palindrome_1(s: str) -> bool:
     
     return True
             
-start = time.time()
-string = 'A man, a plan, a canal: Panama'
-#string = 'race a car'
-palindrome_1(string)
-print(time.time() - start) 
-
-
 
 def palindrome_2(s: str) -> bool:
     '''
@@ -92,13 +83,6 @@ def palindrome_2(s: str) -> bool:
             return False
 
     return True
-
-start = time.time()
-string = 'A man, a plan, a canal: Panama'
-#string = 'race a car'
-palindrome_2(string)
-print(time.time() - start) 
-
 
 
 def palindrome_3(s: str) -> bool:

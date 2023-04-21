@@ -100,4 +100,3 @@ class MyCircularDeque():
     
     def isFull(self):
         return self.len == self.k
-        
